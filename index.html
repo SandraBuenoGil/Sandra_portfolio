@@ -10,8 +10,9 @@
 
 <body>
     <header id="cabecera">
-        <h1>Porfolio Sandra Bueno Gil</h1>
+        <h1>Sandra Bueno Gil</h1>
     </header>
+
     <div class="divnav">
         <nav>
             <a href="#sobremi">Sobre mí</a>
@@ -20,20 +21,25 @@
             <a href="#contacto">Contacto</a>
         </nav>
     </div>
+
     <main>
-        <article>
+        <section>
             <div class="imgporfolio">
                 <img src="imagen/FotoPorfolio.png" alt="Mi imagen de porfolio." class="foto">
                 <div class="overlay">Sandra Bueno Gil</div>
             </div>
-            <h1 id="sobremi">SOBRE MÍ</h1>
-            <div class="fondotexto">
-                <p>Desde que tengo uso de razón he querido siempre relacionarme con el mundo de la actuación, pero, recientemente he descubierto el mundo de la programación y lo encuentro fascinante y
+
+            <article class="fondoarticle">
+                <h1 id="sobremi">SOBRE MÍ</h1>
+                <hr>
+
+                <p>Desde que tengo uso de razón he querido siempre relacionarme con el mundo de la actuación, pero,
+                    recientemente he descubierto el mundo de la programación y lo encuentro fascinante y
                     entretenido. Me gusta la forma de construir desde cero y ver de forma,
                     prácticamente, inmediata los frutos de lo que voy haciendo.</p>
-            </div>
+            </article>
             <hr>
-            <div class="fondotexto">
+            <article class="fondoarticle">
                 <h3>Estudios:</h3>
                 <ul class="estilolista">
                     <li>Arte dramático</li>
@@ -41,9 +47,9 @@
                     <li>Dirección de cine</li>
                     <li>Desarrollo de páginas Web</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="fondotexto">
+            <article class="fondoarticle">
                 <h3>Tecnologías utilizadas:</h3>
                 <ul class="estilolista">
                     <li>HTML</li>
@@ -53,51 +59,61 @@
                     <li>Git</li>
                     <li>GitHub</li>
                 </ul>
-            </div>
-            <div class="fondotexto">
+            </article>
+            <article class="fondoarticle">
                 <h3>Objetivos:</h3>
                 Aprender todo lo necesario para labrarme una carrera en el mundo de la programación.
-            </div>
+            </article>
 
-        </article>
-        <article>
-            <h1 id="proyectos">PROYECTOS</h1>
-            <div class="fondotexto">
-                <ol>
-                    <li>Practicas de programación</li>
-                    <ul>
-                        <li>Repositorio con las prácticas hechas para la asigunatura de programación.</li>
-                        <li>Tecnologías usadas: JAVA, Git, GitHub</li>
-                        <li>Enlace: <a target="_blank" href="https://github.com/SandraBuenoGil/programacions.git"
-                                class="hoverpoyecto">Clica aquí</a> </li>
-                    </ul>
-                </ol>
+        </section>
 
-                <ol>
-                    <li>Porfolio</li>
-                    <ul>
-                        <li>Porfolio creado desde 0 para prácticas de la asignatura Proyecto Intermodular</li>
-                        <li>Tecnologías usadas: CSS, HTML, Git, GitHub </li>
-                        <li>Enlace: <a target="_blank" href="https://github.com/SandraBuenoGil/SandraBuenoGil.git"
-                                class="hoverpoyecto">Clica aquí</a> </li>
-                    </ul>
-                </ol>
+        <section>
+            <article class="fondoarticle">
+                <h1 id="proyectos">PROYECTOS</h1>
+                <hr>
+                <div class="proyect">
+                    <ol>
+                        <li>Practicas de programación</li>
 
-            </div>
-        </article>
-        <article>
-            <h1 id="habilidades">HABILIDADES</h1>
+                        <ul>
+                            <li>Repositorio con las prácticas hechas para la asignatura de programación.</li>
+                            <li>Tecnologías usadas: JAVA, Git, GitHub</li>
+                            <li>Enlace: <a target="_blank" href="https://github.com/SandraBuenoGil/programacions.git"
+                                    class="hoverpoyecto">Clica aquí</a> </li>
+                        </ul>
+                    </ol>
+                    <img src="imagen/proyectojava.png" alt="proyecto de java" class="proyectoimagen">
 
-            <div class="fondotexto">
+                </div>
+                <div class="proyect">
+                    <ol>
+                        <li>Canal de Youtube</li>
+                        <ul>
+                            <li>Canal de youtube dedicado a mis hobbies.</li>
+                            <li>Tecnologías usadas: ShotCut, Youtube, Gimp </li>
+                            <li>Enlace: <a target="_blank" href="https://www.youtube.com/@sandrananana"
+                                    class="hoverpoyecto">Clica aquí</a> </li>
+                        </ul>
+                    </ol>
+                    <img src="imagen/canal.png" alt="canal de youtube" class="proyectoimagen">
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article class="fondoarticle">
+                <h1 id="habilidades">HABILIDADES</h1>
+                <hr>
                 <h3>Lenguajes de programación:</h3>
-                <ul class="estilolistaiconos">
-                    <li><img src="imagen/java.png" alt="icono de java" class="iconos"> JAVA</li>
-                    <li><img src="imagen/css.png" alt="icono de css" class="iconos">CSS</li>
-                    <li><img src="imagen/html-5.png" alt="icono de html" class="iconos">HTML</li>
-                    <li><img src="imagen/mysql.png" alt="icono de mysql" class="iconos">MySQL</li>
-                </ul>
-            </div>
-            <div class="fondotexto">
+                <div class="divicono">
+                    <span class="spaniconos"><img src="imagen/java.png" alt="icono de java" class="iconos">JAVA</span>
+                    <span class="spaniconos"><img src="imagen/css.png" alt="icono de css" class="iconos">CSS</span>
+                    <span class="spaniconos"><img src="imagen/html-5.png" alt="icono de html" class="iconos">HTML</span>
+                    <span class="spaniconos"><img src="imagen/mysql.png" alt="icono de mysql"
+                            class="iconos">MySQL</span>
+                </div>
+            </article>
+            <article class="fondoarticle">
                 <h3>Herramientas</h3>
                 <ul class="estilolista">
                     <li>Github</li>
@@ -107,35 +123,84 @@
                     <li>PSeInt</li>
                     <li>MySQL</li>
                 </ul>
-            </div>
-            <div class="fondotexto">
+            </article>
+            <article class="fondoarticle">
                 <h3>Soft Skills</h3>
-                <ul class="estilolista">
-                    <li>Trabajo en equipo</li>
-                    <li>Deseo de aprendizaje y mejora</li>
-                    <li>Rápida respuesta ante imprevistos</li>
-                    <li>Buena ortganización</li>
-                    <li>Rapodez de trabajo</li>
-                </ul>
-            </div>
-        </article>
-        <article class="contact">
-            <h1 id="contacto">CONTACTO</h1>
-            <div>
-                <img src="imagen/gmail.png" alt="icono email" class="iconocontacta">
-                <a href="mailto:sbuenogil@gmail.com">sbuenogil@gmail.com</a>
-            </div>
-            <br>
-            <div>
-<img src="imagen/github-mark.png" alt="icono github" class="iconocontacta">
-                <a target="_blank" href="https://github.com/SandraBuenoGil">GitHub</a>
 
-            </div>
-        </article>
+                <div class="postit">
+                    <table>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Check</th>
+                        </tr>
+                        <tr>
+                            <td>Trabajo en equipo</td>
+                            <td class="checkcol"><img src="imagen/check.png" alt="check" class="check"></td>
+                        </tr>
+                        <tr>
+                            <td>Deseo de aprender</td>
+                            <td class="checkcol"><img src="imagen/check.png" alt="check" class="check"></td>
+                        </tr>
+                        <tr>
+                            <td>Rápida respuesta ante imprevistos</td>
+                            <td class="checkcol"><img src="imagen/check.png" alt="check" class="check"></td>
+                        </tr>
+                        <tr>
+                            <td>Buena organización</td>
+                            <td class="checkcol"><img src="imagen/check.png" alt="check" class="check"></td>
+                        </tr>
+                        <tr>
+                            <td>Rapidez en ejecución</td>
+                            <td class="checkcol"><img src="imagen/check.png" alt="check" class="check"></td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article class="fondoarticle">
+                <h1>REDES</h1>
+                <hr>
+                <div class="redes">
+                    <a target="_blank" href="https://github.com/SandraBuenoGil"><img src="imagen/github.png"
+                            alt="icono github" class="iconocontacta"></a>
+                    <a target="_blank" href="https://www.youtube.com/@sandrananana"><img src="imagen/youtube.png"
+                            alt="icono youtube" class="iconocontacta"></a>
+                    <a target="_blank" href="https://www.instagram.com/sandararara"><img src="imagen/instagram.png"
+                            alt="icono github" class="iconocontacta"></a>
+                </div>
+
+            </article>
+        </section>
+
+        <section>
+            <article class="contact">
+                <h1 id="contacto">CONTACTO</h1>
+                <hr>
+
+                <form action="mailto:sbuenogil@gmail.com" method="post">
+                    <div class="formulario">
+                        <label for="name">Tu email:</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+
+                    <div class="formulario">
+                        <label for="mensaje">Escribe tu mensaje:</label><br>
+                        <textarea class="textomail" name="mensaje" id="mensaje"
+                            placeholder="Pregúntame lo que quieras."></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="button" value="Enviar">
+                    </div>
+                </form>
+            </article>
+        </section>
+
     </main>
 </body>
 <footer>
-    Copytight 2025
+    &copy; 2025
 </footer>
 
 </html>
