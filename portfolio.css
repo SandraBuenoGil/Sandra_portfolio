@@ -1,35 +1,61 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*El body no debe contener el tamaño de la página*/
+body {
+    background-image: url(imagen/fondomain.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    /*Display flex para que el contenido se pueda reorganizar de foma flexible
+    y flex direction column para que el contenido se organice en columna*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+/*En este caso el main es el que contiene todo el contenido, por eso aquí sí
+se pone el máximo de tamaño de la página*/
+main {
+    max-width: 1080px;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #011b4e;
+    max-width: 1080px;
+    width: 100%;
 }
 
 header {
     background-color: #011b4e;
-    padding: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2%;
     text-align: center;
-    width: 100%;
-
 }
 
 nav {
-    background-color: #8b4c76;
-    width: 90%;
-    margin-left: 5%;
     justify-content: space-around;
-    border-radius: 0px 0px 10px 10px;
+    background-color: #8b4c76;
     display: flex;
-    flex-wrap: wrap;
+    padding: 1%;
 }
 
-/*el padding del nav va en la etiqueta a para que cuando pongs el hover ocupe el color todo el espacio*/
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px;
     position: relative;
 }
 
-/* crea la línea antes de pasar el ratón dejandola invisibole*/
+/*Esta es la forma de hacer un hover con subrayado gradual, si no pones el height
+la línea no se ve, es para darle el grosor*/
 nav a::after {
     content: "";
     position: absolute;
@@ -37,220 +63,185 @@ nav a::after {
     left: 0;
     width: 0%;
     height: 3px;
+    /*Con transition le dices el tiempo que va  tardar en hacer el efecto*/
+    transition: all 0.3s ease;
     background-color: white;
-    transition: width 0.3s ease;
 }
 
-/* hace crecer el hover al 100%*/
+/*Aquí le dices que cuando pongas el cursor encima la línea suba al 100%*/
 nav a:hover::after {
     width: 100%;
 }
 
-nav a:hover {
-    justify-content: space-between;
-}
-
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 17px;
-    background-image: url(imagen/fondomain.jpg);
-    background-size: 80%;
-    background-attachment: fixed;
-    max-width: 750px;
-}
-
-h1 {
-    text-align: center;
-    color: white;
-}
-
 section {
-
-    border-radius: 20px;
-    margin-block: 10px;
-    padding: 20px;
-    width: 100%;
     background: linear-gradient(45deg, #8b4c76, #011b4e);
+    margin-bottom: 2%;
+}
 
+article {
+    padding: 2%;
+    ;
 }
 
 .imgporfolio {
     display: grid;
-    position: relative;
     place-items: center;
+    position: relative;
+    padding: 1%;
 }
 
-.foto {
-    width: 30%;
-    display: block;
+.imgporfolio img {
+
+    width: 20%;
 }
 
 .overlay {
     position: absolute;
     opacity: 0;
-    transition: .5s ease;
-    bottom: 5px;
-    background-color: #aa5277;
+    transition: 0.5s ease;
+    background-color: #8b4c76;
     color: white;
-    padding: 8px;
-    width: 25%;
-
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    padding: 5px;
 }
 
 .imgporfolio:hover .overlay {
     opacity: 1;
 }
 
-.fondoarticle {
-    color: white;
-    border-radius: 10px;
-    padding: 1%;
-    margin-block: 2%;
+
+.article-line {
+    display: flex;
+    justify-content: space-around;
+    background-color: #011b4e;
 }
 
 .proyect {
+    margin-inline: 5%;
+    margin-block: 3%;
+    background-color: grey;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.proyectimg {
+    width: 25%;
+    width: 20vw;
+}
+
+.contenedortexto {
     display: flex;
+    justify-content: space-between;
 }
 
-.proyectoimagen {
-    max-width: 30%;
-    height: auto;
-    float: right;
-    vertical-align: bottom;
-    margin-inline-start: auto;
-    margin-bottom: 2%;
-}
-
-li a {
-    font-weight: bold;
-    color: rgb(142, 178, 255);
-    text-decoration: none;
+.contenedortexto div {
+    width: 60vw;
 }
 
 .divicono {
     display: flex;
-    flex: 1;
-    text-align: center;
+    justify-content: space-between;
+    margin-top: 3%;
+    margin-inline: 15%;
+    position: relative;
+    cursor: pointer;
 }
 
-.spaniconos {
+.divicono div {
     background-color: white;
-    justify-content: space-between;
-    margin-inline: 5%;
-    color: black;
-    border-radius: 15px;
-    padding: 1%;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    margin-inline: 1rem;
 }
 
 .iconos {
-    width: 25%;
-    vertical-align: text-bottom;
+    width: 70%;
+    height: 70%;
+    align-self: center;
 }
 
-.estilolista {
-    list-style: inside;
+/*Con transform translateY indicas cuantos pixeles se va a mover la imagen y en qué dirección*/
+.divicono div:hover,
+.redes div:hover {
+    transform: translateY(-15px);
 }
 
-.postit {
-
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+.herramientas {
+    padding-left: 2rem;
 }
 
 table {
     background-color: wheat;
-    border-collapse: collapse;
-    width: 70%;
-    justify-self: center;
     color: black;
+    width: 60%;
+    justify-self: center;
     table-layout: auto;
-    border-radius: 10px;
+    padding: 1%;
+    border-radius: 5px;
 }
 
-th {
-    border-bottom: 2px solid rgb(226, 95, 95);
-    padding: 5px;
-}
-
-td {
-    border-top: 1px solid rgb(230, 116, 116);
-    padding: 2px;
-    ;
-}
-
-th+th {
-    border-left: 2px solid rgb(226, 95, 95);
-}
-
-td+td {
-    border-left: 1px solid rgb(226, 95, 95);
-}
-
-.check {
+table img {
     width: 20%;
 }
 
-.checkcol {
-    width: 1%;
-    text-align: center;
-    vertical-align: middle;
+th:nth-child(1),
+td:nth-child(1) {
+    width: 80%;
 }
 
-
-.contact {
-    text-align: center;
-    color: white;
-}
-
-.formulario {
-    margin-block: 20px;
+th:nth-child(2),
+td:nth-child(2) {
+    width: 20%;
     text-align: center;
 }
 
-.textomail {
-    width: 50%;
-    height: 100px;
+td {
+    border-bottom: 1px solid rgb(248, 149, 149);
 }
 
-.button {
+td+td {
+    border-left: 1px solid rgb(248, 149, 149);
+}
+
+.redes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.redes div {
+    transition: 0.3s ease-in-out;
+}
+
+ul ul {
+    padding-left: 5%;
+    list-style: circle;
+}
+
+h1 {
     text-align: center;
 }
 
-.button input {
-    background-color: #011b4e;
-    color: white;
-    font-size: 20px;
-    border-radius: 4px;
-    padding: 5px;
-}
+@media (max-width: 767px) {
+    .contenedortexto {
+        display: block;
+    }
 
-.button input:hover {
-    cursor: pointer;
-    background-color: #aa5277;
-    transition: 0.3s;
+    .contenedortexto img {
+        width: 80%;
+        height: 80%;
+        margin-top: 3%;
+    }
 
+    .divicono div {
+        width: 4rem;
+        height: 2.5rem;
 
-}
-
-
-
-.iconocontacta {
-    width: 4%;
-}
-
-.github {
-    width: 5%;
-}
-
-footer {
-    background-color: #011b4e;
-    color: white;
-    text-align: center;
-    padding-block: 2%;
-}
-
-@media (max-width: 480px) {
-    .proyectoimagen {
-        width: 100%;
     }
 }
